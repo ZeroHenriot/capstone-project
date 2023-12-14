@@ -1,0 +1,462 @@
+@font-face {
+  font-family: 'Formula1-Bold';
+  src: url('../public/fonts/Formula1-Bold_web_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Formula1-Regular';
+  src: url('../public/fonts/Formula1-Regular_web_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Formula1-Wide';
+  src: url('../public/fonts/Formula1-Wide_web_0.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+html,
+body,
+#root,
+.raceResults {
+  min-height: 100vh;
+  font-family: 'Formula1-Regular', sans-serif;
+  background-color: #f7f4f1;
+}
+
+.fontBold {
+  font-family: 'Formula1-Bold', sans-serif;
+}
+
+.fontWide {
+  font-family: 'Formula1-Wide', sans-serif;
+}
+
+.modal {
+  font-family: 'Formula1-Regular', sans-serif;
+}
+
+.paragraph {
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.paragraph:first-of-type {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 330px) {
+  .drivers,
+  .races,
+  .teams {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .drivers,
+  .races,
+  .teams {
+    font-size: 18px;
+  }
+}
+
+.linkBorder {
+  border-bottom-right-radius: 10px !important;
+  border-bottom: 1px solid #ffffff !important;
+  border-right: 1px solid #ffffff !important;
+}
+
+.navbarLink {
+  height: 25px;
+  padding-block: 0 !important;
+}
+
+.team-card {
+  border-top-right-radius: 30px;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s;
+  }
+}
+
+.driver-card {
+  border-top-right-radius: 30px;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s;
+  }
+}
+
+.drivers,
+.raceResults,
+.teams,
+.leaderboard {
+  border-top-right-radius: 30px;
+  border-right: 10px solid black;
+  border-top: 10px solid black;
+  margin-bottom: 100px;
+}
+
+.team-detail {
+  position: absolute;
+  top: 7%;
+  left: -50%;
+}
+
+.team-detail > img {
+  width: 150%;
+}
+.chassis,
+.engine {
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  transition: 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* TEAMS COLOR */
+
+.mercedes {
+  background: #6cd3bf;
+}
+.redbull {
+  background: #3671c6;
+}
+.ferrari {
+  background: #f91536;
+}
+.mclaren {
+  background: #f58020;
+}
+.alfaromeo {
+  background: #c92d4b;
+}
+.williams {
+  background: #37bedd;
+}
+.haas {
+  background: #b6babd;
+}
+.alphatauri {
+  background: #5e8faa;
+}
+.alpine {
+  background: #2293d1;
+}
+.astonmartin {
+  background: #358c75;
+}
+
+/* TEAMS AND DRIVERS CARD BORDER HOVER */
+
+.teamAndDrivers-card-mercedes:hover {
+  border-color: #6cd3bf;
+}
+
+.teamAndDrivers-card-redbull:hover {
+  border-color: #3671c6;
+}
+
+.teamAndDrivers-card-ferrari:hover {
+  border-color: #f91536;
+}
+.teamAndDrivers-card-alpine:hover {
+  border-color: #2293d1;
+}
+.teamAndDrivers-card-haas:hover {
+  border-color: #b6babd;
+}
+.teamAndDrivers-card-aston:hover {
+  border-color: #358c75;
+}
+.teamAndDrivers-card-alfa:hover {
+  border-color: #c92d4b;
+}
+.teamAndDrivers-card-alpha:hover {
+  border-color: #5e8faa;
+}
+.teamAndDrivers-card-williams:hover {
+  border-color: #37bedd;
+}
+.teamAndDrivers-card-mcl:hover {
+  border-color: #f58020;
+}
+
+/* DRIVERS NUMBER COLOR */
+
+.mercedesDriverNumber {
+  color: #6cd3bf;
+}
+.redbullDriverNumber {
+  color: #3671c6;
+}
+.ferrariDriverNumber {
+  color: #f91536;
+}
+.mclarenDriverNumber {
+  color: #f58020;
+}
+.alfaromeoDriverNumber {
+  color: #c92d4b;
+}
+.williamsDriverNumber {
+  color: #37bedd;
+}
+.haasDriverNumber {
+  color: #b6babd;
+}
+.alphatauriDriverNumber {
+  color: #5e8faa;
+}
+.alpineDriverNumber {
+  color: #2293d1;
+}
+.astonmartinDriverNumber {
+  color: #358c75;
+}
+
+/* DRIVERS DETAILS PAGE */
+
+.driversInfo,
+.teamsInfo {
+  line-height: 50px;
+}
+
+/* SCHEDULE CARD */
+
+.scheduleCard {
+  border-top-right-radius: 20px;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s;
+    border-color: #f91536;
+  }
+}
+
+.round {
+  width: fit-content;
+  top: -15px;
+  left: 0;
+  background-color: #f7f4f1;
+  color: #f91536;
+}
+
+/* RACE DETAILS */
+
+.headerRace::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 576px) {
+  .headerRace {
+    height: 215px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .headerRace {
+    height: 370px;
+  }
+}
+
+@media screen and(min-width: 1920px) {
+  .headerRace {
+    height: 450px;
+  }
+}
+
+.raceName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content !important;
+}
+
+.raceResult {
+  border-top-right-radius: 30px;
+  border-right: 10px solid #d0d0d2;
+  border-top: 10px solid #d0d0d2;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.raceReview {
+  position: absolute;
+  width: fit-content !important;
+  background-color: #f7f4f1;
+  top: -18px;
+}
+
+.raceReportSection,
+.biography {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-right: 10px solid #e10600;
+  border-top: 10px solid #e10600;
+  border-bottom: 10px solid #e10600;
+}
+
+.raceResultButton,
+.quizAnswer {
+  border: 1px solid #e10600 !important;
+  color: #ffffff !important;
+  transition: 0.3s;
+  &:hover {
+    background-color: #f7f4f1 !important;
+    color: #e10600 !important;
+    transition: 0.3s;
+  }
+}
+
+/* MOBILE DETAILS */
+
+.mobileDetailsCol {
+  border-bottom-right-radius: 20px;
+  border-right: 3px solid rgb(180, 180, 180);
+  border-bottom: 3px solid rgb(180, 180, 180);
+}
+
+.mobileDetailsColTopMercedes {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #6cd3bf;
+  border-top: 5px solid #6cd3bf;
+}
+.mobileDetailsColTopRedBull {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #3671c6;
+  border-top: 5px solid #3671c6;
+}
+.mobileDetailsColTopFerrari {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #f91536;
+  border-top: 5px solid #f91536;
+}
+.mobileDetailsColTopMclaren {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #f58020;
+  border-top: 5px solid #f58020;
+}
+.mobileDetailsColTopAlfaRomeo {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #c92d4b;
+  border-top: 5px solid #c92d4b;
+}
+.mobileDetailsColTopAlphaTauri {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #5e8faa;
+  border-top: 5px solid #5e8faa;
+}
+.mobileDetailsColTopWilliams {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #37bedd;
+  border-top: 5px solid #37bedd;
+}
+.mobileDetailsColTopHaas {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #b6babd;
+  border-top: 5px solid #b6babd;
+}
+.mobileDetailsColTopAlpine {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #2293d1;
+  border-top: 5px solid #2293d1;
+}
+.mobileDetailsColTopAstonMartin {
+  border-top-right-radius: 20px;
+  border-right: 5px solid #358c75;
+  border-top: 5px solid #358c75;
+}
+
+.championShipMobile {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  background: #f7f4f1;
+}
+
+.FirstDriver,
+.SecondDriver {
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    background-color: #000000;
+    color: #ffffff !important;
+    transition: 0.2s;
+    scale: 1.01;
+  }
+}
+
+.teamDetailCar {
+  -webkit-animation: teamDetailCar 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: teamDetailCar 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes teamDetailCar {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes teamDetailCar {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* LOADER */
+
+.loader {
+  width: 120px;
+  height: 20px;
+  transform: skewX(-45deg);
+  background: linear-gradient(#e10600 0 0) left -30px top 0/30px 20px no-repeat #ccc;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  100% {
+    background-position: right -30px top 0;
+  }
+}
